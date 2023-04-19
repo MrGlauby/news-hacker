@@ -33,12 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <input id="userInput" />
-        <DropdownButton className="fa fa-search" id="dropdown-basic-button" title="Search for...">
-          <Dropdown.Item href="#/action-1">Stories</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Comments</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Polls</Dropdown.Item>
-        </DropdownButton>
+
       </header>
       <main>
         {articles.length &&
