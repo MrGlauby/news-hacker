@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function App() {
-  const [articles, setArticles] = useState(null);
+  const [articles, setArticles] = useState([]);
 
   //TODO: Userinput richtig handlen, tags= story, comment, poll
   const userInputElement = document.getElementById("userInput");

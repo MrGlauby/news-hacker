@@ -3,8 +3,9 @@ import "./NewsArticle.css";
 function NewsArticle({title, url, points, author, time, comments}) {
   let shorturl
   return ( 
-    <div className="article">
+    <li className="article">
         
+
 
       <a href={url}>
         <h5>{title}</h5>
@@ -28,7 +29,7 @@ function NewsArticle({title, url, points, author, time, comments}) {
         <span>{comments}</span>
       </a>
 
-    </div>
+    </li>
   );
 }
 
