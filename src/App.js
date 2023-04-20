@@ -5,13 +5,12 @@ import NewsArticle from "./components/NewsArticle.js";
 function App() {
   const [articles, setArticles] = useState([]);
 
-  const userInputElement = document.getElementById("userInput");
-  const userTagElement = document.getElementById("tagSelector");
-
   function handleSearch(){
-    console.log(userInputElement);
+    const userInputElement = document.getElementById("userInput");
+    const userTagElement = document.getElementById("tagSelector");
     let userInput = userInputElement.value;
     let userTag = userTagElement.options[userTagElement.selectedIndex].value;
+
     let targeturl = "http://hn.algolia.com/api/v1/search?query=";
     targeturl += userInput;
     if(userTag) targeturl += `&tags=${userTag}`;
