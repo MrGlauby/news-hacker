@@ -5,8 +5,6 @@ function NewsArticle({title, url, points, author, time, comments}) {
   return ( 
     <li className="article">
         
-
-
       <a href={url}>
         <h5>{title}</h5>
       </a>
