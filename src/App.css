@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #F6F6EF;
   width: 85%;
+  margin: 0.5rem auto;
 }
 
 .App-header {
@@ -9,8 +10,9 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: black;
+  padding-right: 2rem;
 }
 
 .branding {

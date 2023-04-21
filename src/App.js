@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import NewsArticle from "./components/NewsArticle.js";
 
 function App() {
   const [articles, setArticles] = useState([]);
+
+  useEffect(()=>{
+    fetch("http://hn.algolia.com/api/v1/search_by_date?tags=story")
+    .then((response) => {
+      if (!response.ok)
+        throw new Error(`So, this happened: ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      setArticles(data.hits);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  },[]);
 
   function handleSearch() {
     const userInputElement = document.getElementById("userInput");
@@ -58,6 +73,7 @@ function App() {
                 author={article.author}
                 time={article.created_at_i}
                 comments={article.num_comments}
+                id={article.objectID}
               />
             ))
           ) : (
