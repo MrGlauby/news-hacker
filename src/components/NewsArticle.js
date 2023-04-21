@@ -10,25 +10,25 @@ function NewsArticle({ title, url, points, author, time, comments, id }) {
   return (
     <li className="article">
       <div>
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noreferrer">
           <h4>{title}</h4>
         </a>
 
-        <a href={`https://news.ycombinator.com/from?site=${shorturl}`} target="_blank">
+        <a href={`https://news.ycombinator.com/from?site=${shorturl}`} target="_blank" rel="noreferrer">
           <span>({shorturl})</span>
         </a>
       </div>
       <span>{points} points</span>
 
-      <a href={`https://news.ycombinator.com/user?id=${author}`} target="_blank">
+      <a href={`https://news.ycombinator.com/user?id=${author}`} target="_blank" rel="noreferrer">
         <span>by {author}</span>
       </a>
 
-      <a href={`https://news.ycombinator.com/item?id=${id}`} target="_blank">
+      <a href={`https://news.ycombinator.com/item?id=${id}`} target="_blank" rel="noreferrer">
         <span>{timeSince(time)}</span>
       </a>
 
-      <a href={`https://news.ycombinator.com/item?id=${id}`} target="_blank">
+      <a href={`https://news.ycombinator.com/item?id=${id}`} target="_blank" rel="noreferrer">
         <span>{comments} comments</span>
       </a>
     </li>
