@@ -68,11 +68,11 @@ function App() {
             articles.map((article) => (
               <NewsArticle
                 title={article.story_title || article.title}
-                url={article.story_url || article.url}
-                points={article.points}
+                url={article.story_url || article.url || `https://news.ycombinator.com/item?id=${article.objectID}`}
+                points={article.points || "0"}
                 author={article.author}
                 time={article.created_at_i}
-                comments={article.num_comments}
+                comments={article.num_comments || "0"}
                 id={article.objectID}
               />
             ))
